@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Phone, Mail, MapPin, Menu, X, Plane, Hotel, Ship, Palmtree, Package, CheckCircle2, Star, Users, HeadphonesIcon, ThumbsUp } from 'lucide-react';
+import { Phone, MapPin, Menu, X, Plane, Hotel, Ship, Palmtree, Package, CheckCircle2, Star, Users, HeadphonesIcon, ThumbsUp, Car, Castle, Sparkles } from 'lucide-react';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,13 +17,16 @@ function App() {
     { icon: Hotel, title: 'Hotels', description: 'Luxury and budget-friendly accommodations worldwide' },
     { icon: Ship, title: 'Cruises', description: 'Unforgettable cruise experiences across the seas' },
     { icon: Palmtree, title: 'Safaris', description: 'Adventure-filled safari experiences in exotic locations' },
+    { icon: Car, title: 'Rental Cars', description: 'Convenient car rentals at competitive rates worldwide' },
+    { icon: Castle, title: 'Disney Packages', description: 'Magical Disney vacation packages for the whole family' },
+    { icon: Sparkles, title: 'Universal Studios', description: 'Thrilling Universal Studios vacation experiences' },
     { icon: Package, title: 'Vacation Packages', description: 'All-inclusive packages tailored to your needs' },
   ];
 
   const features = [
     { icon: Users, title: 'Personalized Planning', description: 'Customized travel experiences just for you' },
     { icon: ThumbsUp, title: 'Best Deals', description: 'Competitive prices without compromising quality' },
-    { icon: HeadphonesIcon, title: 'Trusted Support', description: '24/7 customer service to assist you' },
+    { icon: HeadphonesIcon, title: 'Trusted Support', description: 'Dedicated customer service to assist you' },
     { icon: CheckCircle2, title: 'Stress-Free Booking', description: 'Simple and secure booking process' },
   ];
 
@@ -35,23 +38,40 @@ function App() {
 
   return (
     <div className="min-h-screen bg-white">
-      <header className="fixed top-0 w-full bg-white shadow-md z-50 transition-all duration-300">
-        <nav className="container mx-auto px-4 py-4">
+      <header className="fixed top-0 w-full bg-white shadow-md z-50 transition-all duration-300 border-b-2 border-yellow-500">
+        <nav className="container mx-auto px-4 py-3">
           <div className="flex justify-between items-center">
-            <div className="flex items-center space-x-2">
-              <Plane className="h-8 w-8 text-emerald-600" />
-              <span className="text-2xl font-bold bg-gradient-to-r from-emerald-600 to-yellow-600 bg-clip-text text-transparent">
-                ZEMKAY TRAVELS
-              </span>
+            <div className="flex items-center space-x-3">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full blur-sm opacity-30"></div>
+                <div className="relative bg-gradient-to-br from-emerald-500 to-green-600 p-2 rounded-full">
+                  <Plane className="h-7 w-7 text-white" />
+                </div>
+              </div>
+              <div>
+                <span className="text-2xl md:text-3xl font-bold block" style={{
+                  background: 'linear-gradient(135deg, #D4AF37 0%, #F4D03F 50%, #D4AF37 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                  textShadow: '0 2px 4px rgba(212, 175, 55, 0.2)'
+                }}>
+                  ZEMKAY
+                </span>
+                <span className="text-sm md:text-base font-semibold text-emerald-700 -mt-1 block">TRAVELS</span>
+              </div>
             </div>
 
-            <div className="hidden md:flex items-center space-x-8">
-              <a href="#home" className="text-gray-700 hover:text-emerald-600 transition-colors">Home</a>
-              <a href="#about" className="text-gray-700 hover:text-emerald-600 transition-colors">About</a>
-              <a href="#services" className="text-gray-700 hover:text-emerald-600 transition-colors">Services</a>
-              <a href="#testimonials" className="text-gray-700 hover:text-emerald-600 transition-colors">Testimonials</a>
-              <a href="#contact" className="text-gray-700 hover:text-emerald-600 transition-colors">Contact</a>
-              <a href="tel:5165235325" className="bg-gradient-to-r from-emerald-600 to-green-700 text-white px-6 py-2 rounded-full hover:shadow-lg transition-all duration-300">
+            <div className="hidden md:flex items-center space-x-6">
+              <a href="#home" className="text-gray-700 hover:text-yellow-600 transition-colors font-medium">Home</a>
+              <a href="#about" className="text-gray-700 hover:text-yellow-600 transition-colors font-medium">About</a>
+              <a href="#services" className="text-gray-700 hover:text-yellow-600 transition-colors font-medium">Services</a>
+              <a href="#testimonials" className="text-gray-700 hover:text-yellow-600 transition-colors font-medium">Testimonials</a>
+              <a href="#contact" className="text-gray-700 hover:text-yellow-600 transition-colors font-medium">Contact</a>
+              <a
+                href="tel:5162340786"
+                className="bg-gradient-to-r from-yellow-500 via-yellow-600 to-yellow-500 text-white px-6 py-2.5 rounded-full hover:shadow-lg transition-all duration-300 font-semibold border-2 border-yellow-600"
+              >
                 Call Now
               </a>
             </div>
@@ -66,85 +86,87 @@ function App() {
 
           {isMenuOpen && (
             <div className="md:hidden mt-4 pb-4 space-y-4 animate-fadeIn">
-              <a href="#home" className="block text-gray-700 hover:text-emerald-600 transition-colors">Home</a>
-              <a href="#about" className="block text-gray-700 hover:text-emerald-600 transition-colors">About</a>
-              <a href="#services" className="block text-gray-700 hover:text-emerald-600 transition-colors">Services</a>
-              <a href="#testimonials" className="block text-gray-700 hover:text-emerald-600 transition-colors">Testimonials</a>
-              <a href="#contact" className="block text-gray-700 hover:text-emerald-600 transition-colors">Contact</a>
+              <a href="#home" className="block text-gray-700 hover:text-yellow-600 transition-colors font-medium">Home</a>
+              <a href="#about" className="block text-gray-700 hover:text-yellow-600 transition-colors font-medium">About</a>
+              <a href="#services" className="block text-gray-700 hover:text-yellow-600 transition-colors font-medium">Services</a>
+              <a href="#testimonials" className="block text-gray-700 hover:text-yellow-600 transition-colors font-medium">Testimonials</a>
+              <a href="#contact" className="block text-gray-700 hover:text-yellow-600 transition-colors font-medium">Contact</a>
             </div>
           )}
         </nav>
       </header>
 
-      <section id="home" className="pt-24 pb-20 bg-gradient-to-br from-emerald-50 via-white to-yellow-50">
-        <div className="container mx-auto px-4">
+      <section id="home" className="pt-32 pb-24 bg-gradient-to-br from-emerald-50 via-white to-yellow-50 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyMTIsIDE3NSwgNTUsIDAuMSkiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] opacity-30"></div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 animate-fadeIn">
+            <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 animate-fadeIn leading-tight">
               Your Trusted Travel Partner
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-8 animate-fadeIn" style={{ animationDelay: '0.2s' }}>
-              Flights, Cruises, Safaris & Vacation Packages
+            <p className="text-xl md:text-2xl text-gray-600 mb-10 animate-fadeIn" style={{ animationDelay: '0.2s' }}>
+              Flights, Hotels, Cruises, Safaris & Vacation Packages
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fadeIn" style={{ animationDelay: '0.4s' }}>
               <a
                 href="#contact"
-                className="bg-gradient-to-r from-yellow-500 to-yellow-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                className="bg-gradient-to-r from-yellow-500 via-yellow-600 to-yellow-500 text-white px-10 py-4 rounded-full text-lg font-bold hover:shadow-xl transform hover:scale-105 transition-all duration-300 border-2 border-yellow-600"
               >
                 Get a Free Quote
               </a>
               <a
-                href="tel:5165235325"
-                className="bg-gradient-to-r from-emerald-600 to-green-700 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center gap-2"
+                href="tel:5162340786"
+                className="bg-gradient-to-r from-emerald-600 to-green-700 text-white px-10 py-4 rounded-full text-lg font-bold hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center gap-2"
               >
                 <Phone className="h-5 w-5" />
-                516-523-5325
+                (516) 234-0786
               </a>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="about" className="py-20 bg-white">
+      <section id="about" className="py-24 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">About ZEMKAY TRAVELS</h2>
-            <p className="text-lg text-gray-600 leading-relaxed mb-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">About ZEMKAY TRAVELS</h2>
+            <p className="text-xl text-gray-600 leading-relaxed mb-6">
               At ZEMKAY TRAVELS, we believe that travel should be exciting, not stressful. With years of experience in the travel industry, we specialize in creating unforgettable journeys tailored to your preferences and budget.
             </p>
-            <p className="text-lg text-gray-600 leading-relaxed">
+            <p className="text-xl text-gray-600 leading-relaxed">
               Whether you're planning a romantic getaway, a family vacation, or an adventurous safari, our dedicated team is here to handle every detail so you can focus on making memories that last a lifetime.
             </p>
           </div>
         </div>
       </section>
 
-      <section id="services" className="py-20 bg-gray-50">
+      <section id="services" className="py-24 bg-gradient-to-br from-gray-50 to-emerald-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
-            <p className="text-lg text-gray-600">Comprehensive travel solutions for every journey</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Services</h2>
+            <p className="text-xl text-gray-600">Comprehensive travel solutions for every journey</p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 group"
+                className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 group border-t-4 border-yellow-500"
               >
                 <div className="bg-gradient-to-br from-emerald-100 to-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <service.icon className="h-8 w-8 text-emerald-600" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">{service.title}</h3>
-                <p className="text-gray-600">{service.description}</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
+                <p className="text-gray-600 text-sm">{service.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-emerald-600 to-green-700 text-white">
-        <div className="container mx-auto px-4">
+      <section className="py-24 bg-gradient-to-br from-emerald-600 to-green-700 text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsIDI1NSwgMjU1LCAwLjEpIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-20"></div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Why Choose ZEMKAY TRAVELS?</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Choose ZEMKAY TRAVELS?</h2>
             <p className="text-xl text-emerald-100">Your satisfaction is our priority</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
@@ -153,7 +175,7 @@ function App() {
                 key={index}
                 className="text-center group hover:scale-105 transition-transform duration-300"
               >
-                <div className="bg-white/10 backdrop-blur-sm w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-white/20 transition-colors duration-300">
+                <div className="bg-white/10 backdrop-blur-sm w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-yellow-500/30 transition-colors duration-300 border-2 border-white/20">
                   <feature.icon className="h-10 w-10" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
@@ -164,24 +186,24 @@ function App() {
         </div>
       </section>
 
-      <section id="testimonials" className="py-20 bg-white">
+      <section id="testimonials" className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
-            <p className="text-lg text-gray-600">Real experiences from real travelers</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
+            <p className="text-xl text-gray-600">Real experiences from real travelers</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="bg-gradient-to-br from-emerald-50 to-yellow-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
+                className="bg-gradient-to-br from-emerald-50 to-yellow-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-t-4 border-yellow-500"
               >
                 <div className="flex mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="h-5 w-5 fill-yellow-500 text-yellow-500" />
                   ))}
                 </div>
-                <p className="text-gray-700 mb-4 italic">"{testimonial.text}"</p>
+                <p className="text-gray-700 mb-4 italic text-lg">"{testimonial.text}"</p>
                 <p className="font-semibold text-gray-900">{testimonial.name}</p>
               </div>
             ))}
@@ -189,50 +211,50 @@ function App() {
         </div>
       </section>
 
-      <section id="contact" className="py-20 bg-gray-50">
+      <section id="contact" className="py-24 bg-gradient-to-br from-gray-50 to-emerald-50">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Get In Touch</h2>
-              <p className="text-lg text-gray-600">Ready to plan your next adventure? Contact us today!</p>
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Get In Touch</h2>
+              <p className="text-xl text-gray-600">Ready to plan your next adventure? Contact us today!</p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-12">
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="bg-gradient-to-br from-emerald-100 to-yellow-100 p-3 rounded-full">
-                    <Phone className="h-6 w-6 text-emerald-600" />
+              <div className="space-y-8">
+                <div className="flex items-start space-x-4 bg-white p-6 rounded-2xl shadow-md">
+                  <div className="bg-gradient-to-br from-yellow-400 to-yellow-600 p-4 rounded-full">
+                    <Phone className="h-7 w-7 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
-                    <a href="tel:5165235325" className="text-emerald-600 hover:text-emerald-700 text-lg">
-                      516-523-5325
+                    <h3 className="font-bold text-gray-900 mb-2 text-lg">Phone</h3>
+                    <a href="tel:5162340786" className="text-emerald-600 hover:text-emerald-700 text-xl font-semibold">
+                      (516) 234-0786
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4">
-                  <div className="bg-gradient-to-br from-emerald-100 to-yellow-100 p-3 rounded-full">
-                    <MapPin className="h-6 w-6 text-emerald-600" />
+                <div className="flex items-start space-x-4 bg-white p-6 rounded-2xl shadow-md">
+                  <div className="bg-gradient-to-br from-emerald-500 to-green-600 p-4 rounded-full">
+                    <MapPin className="h-7 w-7 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Website</h3>
-                    <a href="https://www.zemkaytravels.com" className="text-emerald-600 hover:text-emerald-700">
+                    <h3 className="font-bold text-gray-900 mb-2 text-lg">Website</h3>
+                    <a href="https://www.zemkaytravels.com" className="text-emerald-600 hover:text-emerald-700 text-lg">
                       www.zemkaytravels.com
                     </a>
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-br from-emerald-600 to-green-700 text-white p-6 rounded-2xl">
-                  <h3 className="text-xl font-bold mb-2">Business Hours</h3>
-                  <p className="text-emerald-100">Monday - Friday: 9:00 AM - 6:00 PM</p>
-                  <p className="text-emerald-100">Saturday: 10:00 AM - 4:00 PM</p>
-                  <p className="text-emerald-100">Sunday: Closed</p>
+                <div className="bg-gradient-to-br from-emerald-600 to-green-700 text-white p-8 rounded-2xl shadow-lg">
+                  <h3 className="text-2xl font-bold mb-4">Let's Plan Your Journey</h3>
+                  <p className="text-emerald-100 text-lg leading-relaxed">
+                    From flights and hotels to unforgettable vacation packages, we're here to make your travel dreams a reality. Contact us today for personalized service and the best deals.
+                  </p>
                 </div>
               </div>
 
-              <form onSubmit={handleSubmit} className="bg-white p-8 rounded-2xl shadow-lg">
-                <div className="space-y-4">
+              <form onSubmit={handleSubmit} className="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-yellow-500">
+                <div className="space-y-5">
                   <div>
                     <label htmlFor="name" className="block text-gray-700 font-semibold mb-2">Name</label>
                     <input
@@ -241,7 +263,7 @@ function App() {
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent outline-none transition-all"
+                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 outline-none transition-all"
                       placeholder="Your Name"
                     />
                   </div>
@@ -253,7 +275,7 @@ function App() {
                       required
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent outline-none transition-all"
+                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 outline-none transition-all"
                       placeholder="your@email.com"
                     />
                   </div>
@@ -265,8 +287,8 @@ function App() {
                       required
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent outline-none transition-all"
-                      placeholder="123-456-7890"
+                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 outline-none transition-all"
+                      placeholder="(123) 456-7890"
                     />
                   </div>
                   <div>
@@ -277,13 +299,13 @@ function App() {
                       rows={4}
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent outline-none transition-all resize-none"
+                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 outline-none transition-all resize-none"
                       placeholder="Tell us about your dream vacation..."
                     />
                   </div>
                   <button
                     type="submit"
-                    className="w-full bg-gradient-to-r from-emerald-600 to-green-700 text-white py-3 rounded-lg font-semibold hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                    className="w-full bg-gradient-to-r from-yellow-500 via-yellow-600 to-yellow-500 text-white py-4 rounded-lg font-bold text-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 border-2 border-yellow-600"
                   >
                     Send Message
                   </button>
@@ -294,39 +316,44 @@ function App() {
         </div>
       </section>
 
-      <footer className="bg-gray-900 text-white py-12">
+      <footer className="bg-gray-900 text-white py-12 border-t-4 border-yellow-500">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <Plane className="h-8 w-8 text-emerald-400" />
-                <span className="text-2xl font-bold">ZEMKAY TRAVELS</span>
+                <div className="bg-gradient-to-br from-emerald-500 to-green-600 p-2 rounded-full">
+                  <Plane className="h-7 w-7 text-white" />
+                </div>
+                <div>
+                  <span className="text-2xl font-bold block text-yellow-400">ZEMKAY</span>
+                  <span className="text-sm font-semibold text-emerald-400 -mt-1 block">TRAVELS</span>
+                </div>
               </div>
               <p className="text-gray-400">Your trusted partner in creating unforgettable travel experiences.</p>
             </div>
 
             <div>
-              <h3 className="text-xl font-bold mb-4">Quick Links</h3>
+              <h3 className="text-xl font-bold mb-4 text-yellow-400">Quick Links</h3>
               <ul className="space-y-2">
-                <li><a href="#home" className="text-gray-400 hover:text-emerald-400 transition-colors">Home</a></li>
-                <li><a href="#about" className="text-gray-400 hover:text-emerald-400 transition-colors">About</a></li>
-                <li><a href="#services" className="text-gray-400 hover:text-emerald-400 transition-colors">Services</a></li>
-                <li><a href="#contact" className="text-gray-400 hover:text-emerald-400 transition-colors">Contact</a></li>
+                <li><a href="#home" className="text-gray-400 hover:text-yellow-400 transition-colors">Home</a></li>
+                <li><a href="#about" className="text-gray-400 hover:text-yellow-400 transition-colors">About</a></li>
+                <li><a href="#services" className="text-gray-400 hover:text-yellow-400 transition-colors">Services</a></li>
+                <li><a href="#contact" className="text-gray-400 hover:text-yellow-400 transition-colors">Contact</a></li>
               </ul>
             </div>
 
             <div>
-              <h3 className="text-xl font-bold mb-4">Contact Us</h3>
+              <h3 className="text-xl font-bold mb-4 text-yellow-400">Contact Us</h3>
               <ul className="space-y-2">
                 <li className="flex items-center space-x-2">
-                  <Phone className="h-5 w-5 text-emerald-400" />
-                  <a href="tel:5165235325" className="text-gray-400 hover:text-emerald-400 transition-colors">
-                    516-523-5325
+                  <Phone className="h-5 w-5 text-yellow-400" />
+                  <a href="tel:5162340786" className="text-gray-400 hover:text-yellow-400 transition-colors font-semibold">
+                    (516) 234-0786
                   </a>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <MapPin className="h-5 w-5 text-emerald-400" />
-                  <a href="https://www.zemkaytravels.com" className="text-gray-400 hover:text-emerald-400 transition-colors">
+                  <MapPin className="h-5 w-5 text-yellow-400" />
+                  <a href="https://www.zemkaytravels.com" className="text-gray-400 hover:text-yellow-400 transition-colors">
                     www.zemkaytravels.com
                   </a>
                 </li>
@@ -341,9 +368,10 @@ function App() {
       </footer>
 
       <a
-        href="tel:5165235325"
-        className="fixed bottom-6 right-6 bg-gradient-to-r from-emerald-600 to-green-700 text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-300 z-50 animate-bounce"
+        href="tel:5162340786"
+        className="fixed bottom-6 right-6 bg-gradient-to-r from-yellow-500 via-yellow-600 to-yellow-500 text-white p-5 rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-300 z-50 animate-bounce border-2 border-yellow-600"
         style={{ animationDuration: '3s' }}
+        aria-label="Call us at (516) 234-0786"
       >
         <Phone className="h-6 w-6" />
       </a>
