@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Phone, MapPin, Menu, X, Plane, Hotel, Ship, Palmtree, Package, CheckCircle2, Star, Users, HeadphonesIcon, ThumbsUp, Car, Castle, Sparkles } from 'lucide-react';
+import { Phone, MapPin, Menu, X, Plane, Hotel, Ship, Palmtree, Package, CheckCircle2, Star, Users, HeadphonesIcon, ThumbsUp, Car, Castle, Sparkles, Facebook, Instagram } from 'lucide-react';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -41,25 +41,12 @@ function App() {
       <header className="fixed top-0 w-full bg-white shadow-md z-50 transition-all duration-300 border-b-2 border-yellow-500">
         <nav className="container mx-auto px-4 py-3">
           <div className="flex justify-between items-center">
-            <div className="flex items-center space-x-3">
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full blur-sm opacity-30"></div>
-                <div className="relative bg-gradient-to-br from-emerald-500 to-green-600 p-2 rounded-full">
-                  <Plane className="h-7 w-7 text-white" />
-                </div>
-              </div>
-              <div>
-                <span className="text-2xl md:text-3xl font-bold block" style={{
-                  background: 'linear-gradient(135deg, #D4AF37 0%, #F4D03F 50%, #D4AF37 100%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
-                  textShadow: '0 2px 4px rgba(212, 175, 55, 0.2)'
-                }}>
-                  ZEMKAY
-                </span>
-                <span className="text-sm md:text-base font-semibold text-emerald-700 -mt-1 block">TRAVELS</span>
-              </div>
+            <div className="flex items-center">
+              <img
+                src="/att.onsvfgdls5qh_vzm-hvfcymdr-za-ajc_rgv9gbwon0.jpg"
+                alt="ZEMKAY TRAVELS Logo"
+                className="h-14 md:h-16 w-auto object-contain"
+              />
             </div>
 
             <div className="hidden md:flex items-center space-x-6">
@@ -211,6 +198,39 @@ function App() {
         </div>
       </section>
 
+      <section className="py-20 bg-gradient-to-br from-yellow-50 to-emerald-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Follow Us on Social Media</h2>
+            <p className="text-xl text-gray-600 mb-10">Stay connected for travel inspiration, deals, and updates</p>
+            <div className="flex flex-col sm:flex-row justify-center gap-6">
+              <a
+                href="https://www.facebook.com/share/188jDNNzhN/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center justify-center gap-3 bg-white px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-2 border-yellow-500"
+              >
+                <div className="bg-gradient-to-br from-blue-500 to-blue-600 p-3 rounded-full group-hover:scale-110 transition-transform duration-300">
+                  <Facebook className="h-6 w-6 text-white" fill="white" />
+                </div>
+                <span className="text-gray-900 font-semibold text-lg">Facebook</span>
+              </a>
+              <a
+                href="https://www.instagram.com/zemkaytravels?igsh=dmhldmV6dTEyYzYw"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center justify-center gap-3 bg-white px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-2 border-yellow-500"
+              >
+                <div className="bg-gradient-to-br from-pink-500 via-purple-500 to-orange-500 p-3 rounded-full group-hover:scale-110 transition-transform duration-300">
+                  <Instagram className="h-6 w-6 text-white" />
+                </div>
+                <span className="text-gray-900 font-semibold text-lg">Instagram</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="contact" className="py-24 bg-gradient-to-br from-gray-50 to-emerald-50">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
@@ -320,14 +340,12 @@ function App() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <div className="bg-gradient-to-br from-emerald-500 to-green-600 p-2 rounded-full">
-                  <Plane className="h-7 w-7 text-white" />
-                </div>
-                <div>
-                  <span className="text-2xl font-bold block text-yellow-400">ZEMKAY</span>
-                  <span className="text-sm font-semibold text-emerald-400 -mt-1 block">TRAVELS</span>
-                </div>
+              <div className="mb-4">
+                <img
+                  src="/att.onsvfgdls5qh_vzm-hvfcymdr-za-ajc_rgv9gbwon0.jpg"
+                  alt="ZEMKAY TRAVELS Logo"
+                  className="h-16 w-auto object-contain"
+                />
               </div>
               <p className="text-gray-400">Your trusted partner in creating unforgettable travel experiences.</p>
             </div>
@@ -344,7 +362,7 @@ function App() {
 
             <div>
               <h3 className="text-xl font-bold mb-4 text-yellow-400">Contact Us</h3>
-              <ul className="space-y-2">
+              <ul className="space-y-2 mb-6">
                 <li className="flex items-center space-x-2">
                   <Phone className="h-5 w-5 text-yellow-400" />
                   <a href="tel:5162340786" className="text-gray-400 hover:text-yellow-400 transition-colors font-semibold">
@@ -358,6 +376,29 @@ function App() {
                   </a>
                 </li>
               </ul>
+              <div>
+                <h4 className="text-lg font-bold mb-3 text-yellow-400">Follow Us</h4>
+                <div className="flex gap-3">
+                  <a
+                    href="https://www.facebook.com/share/188jDNNzhN/?mibextid=wwXIfr"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-gray-800 p-3 rounded-full hover:bg-yellow-500 transition-all duration-300 transform hover:scale-110"
+                    aria-label="Follow us on Facebook"
+                  >
+                    <Facebook className="h-5 w-5 text-white" fill="white" />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/zemkaytravels?igsh=dmhldmV6dTEyYzYw"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-gray-800 p-3 rounded-full hover:bg-gradient-to-br hover:from-pink-500 hover:via-purple-500 hover:to-orange-500 transition-all duration-300 transform hover:scale-110"
+                    aria-label="Follow us on Instagram"
+                  >
+                    <Instagram className="h-5 w-5 text-white" />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
 
