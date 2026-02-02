@@ -117,10 +117,16 @@ function App() {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">About ZEMKAY TRAVELS</h2>
             <p className="text-xl text-gray-600 leading-relaxed mb-6">
-              At ZEMKAY TRAVELS, we believe that travel should be exciting, not stressful. With years of experience in the travel industry, we specialize in creating unforgettable journeys tailored to your preferences and budget.
+              At ZemKay Travels, we're a family-operated travel company built on a love for exploring the world and creating meaningful experiences together. We believe travel should feel exciting, effortless, and deeply personal.
+            </p>
+            <p className="text-xl text-gray-600 leading-relaxed mb-6">
+              Because we're family-run, we treat every client like one of our own—taking the time to understand your vision and handling every detail with care. Whether you're dreaming of a relaxing getaway, an adventurous escape, or a once-in-a-lifetime journey, we design trips that fit your style, budget, and goals.
+            </p>
+            <p className="text-xl text-gray-600 leading-relaxed mb-6">
+              From curated itineraries to trusted guidance, we take the stress out of planning so you can focus on making memories. With ZemKay Travels, you're not just booking a trip—you're traveling with heart, intention, and confidence.
             </p>
             <p className="text-xl text-gray-600 leading-relaxed">
-              Whether you're planning a romantic getaway, a family vacation, or an adventurous safari, our dedicated team is here to handle every detail so you can focus on making memories that last a lifetime.
+              Let's explore the world together. 🌍✈️
             </p>
           </div>
         </div>
