@@ -136,10 +136,13 @@ function App() {
 
       <section id="about" className="py-24 bg-white relative overflow-hidden">
         <div
-          className="absolute inset-0 bg-center bg-cover bg-no-repeat opacity-10"
-          style={{ backgroundImage: 'url(/att.dwx7kaykmwq2rzoeeo_bz6ywi8wxq4q1esz0gm905wy.jpg)' }}
+          className="absolute inset-0 bg-center bg-cover bg-no-repeat"
+          style={{
+            backgroundImage: 'url(/att.dwx7kaykmwq2rzoeeo_bz6ywi8wxq4q1esz0gm905wy.jpg)',
+            opacity: '0.22'
+          }}
         ></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-white/40 via-white/20 to-white/40"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-white/75 to-white/70"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">About ZEmKay Travels</h2>
