@@ -134,8 +134,13 @@ function App() {
         </div>
       </section>
 
-      <section id="about" className="py-24 bg-white">
-        <div className="container mx-auto px-4">
+      <section id="about" className="py-24 bg-white relative overflow-hidden">
+        <div
+          className="absolute inset-0 bg-center bg-cover bg-no-repeat opacity-10"
+          style={{ backgroundImage: 'url(/att.dwx7kaykmwq2rzoeeo_bz6ywi8wxq4q1esz0gm905wy.jpg)' }}
+        ></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-white/40 via-white/20 to-white/40"></div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">About ZEmKay Travels</h2>
             <p className="text-xl text-gray-600 leading-relaxed mb-6">
