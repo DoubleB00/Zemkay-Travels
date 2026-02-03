@@ -4,6 +4,7 @@ import { Phone, MapPin, Menu, X, Plane, Hotel, Ship, Palmtree, Package, CheckCir
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
+  const [lightboxImage, setLightboxImage] = useState<string | null>(null);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -164,7 +165,7 @@ function App() {
             <p className="text-xl text-gray-600">Discover the world's most incredible destinations</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-            <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+            <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer" onClick={() => setLightboxImage('/att.fajhgn0tncyybm-i-t3bidnsdzz7eoomvu2e9wwn-m4.jpg')}>
               <img
                 src="/att.fajhgn0tncyybm-i-t3bidnsdzz7eoomvu2e9wwn-m4.jpg"
                 alt="Scenic train journey through mountains"
@@ -179,7 +180,7 @@ function App() {
               </div>
             </div>
 
-            <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+            <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer" onClick={() => setLightboxImage('/att.gxrkznv34waxxccbpebxznimiupd5cvonnf1s-c9cye.jpg')}>
               <img
                 src="/att.gxrkznv34waxxccbpebxznimiupd5cvonnf1s-c9cye.jpg"
                 alt="Luxury tropical resort with infinity pool"
@@ -194,7 +195,7 @@ function App() {
               </div>
             </div>
 
-            <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+            <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer" onClick={() => setLightboxImage('/att.utccchx9pocvo8kc1mgft7rplqlsevxlhu7hd9cnoae.jpg')}>
               <img
                 src="/att.utccchx9pocvo8kc1mgft7rplqlsevxlhu7hd9cnoae.jpg"
                 alt="Pristine tropical beach with palm trees"
@@ -209,7 +210,7 @@ function App() {
               </div>
             </div>
 
-            <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+            <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer" onClick={() => setLightboxImage('/att.lnujmnwhwkyk7d9h904ugpbictv9esj9o4pv80onnfc.jpg')}>
               <img
                 src="/att.lnujmnwhwkyk7d9h904ugpbictv9esj9o4pv80onnfc.jpg"
                 alt="Premium rental car fleet"
@@ -224,7 +225,7 @@ function App() {
               </div>
             </div>
 
-            <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 md:col-span-2 lg:col-span-2">
+            <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 md:col-span-2 lg:col-span-2 cursor-pointer" onClick={() => setLightboxImage('/att.qbtzfofebwplljk1uktgmvifpnslsst2odj81srhjba.jpg')}>
               <img
                 src="/att.qbtzfofebwplljk1uktgmvifpnslsst2odj81srhjba.jpg"
                 alt="Sacred pilgrimage destination"
@@ -235,6 +236,68 @@ function App() {
                 <div className="p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                   <h3 className="text-2xl font-bold mb-2">Religious Pilgrimages</h3>
                   <p className="text-sm text-gray-200">Fulfill your spiritual journey with our guided pilgrimage packages</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto mt-6">
+            <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer" onClick={() => setLightboxImage('/travel-highlights/att.zbrfjoqug1kgj664vsnoys_bwug76vqk7-gh0twrpxw.jpg')}>
+              <img
+                src="/travel-highlights/att.zbrfjoqug1kgj664vsnoys_bwug76vqk7-gh0twrpxw.jpg"
+                alt="Luxury cruise ship"
+                className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                <div className="p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                  <h3 className="text-2xl font-bold mb-2">Cruise Vacations</h3>
+                  <p className="text-sm text-gray-200">Sail the seas in style aboard world-class cruise ships</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer" onClick={() => setLightboxImage('/travel-highlights/att.yvf-gxo9dx4v8bcrlv47j4eztit1t-jalf8tal36hj8.jpg')}>
+              <img
+                src="/travel-highlights/att.yvf-gxo9dx4v8bcrlv47j4eztit1t-jalf8tal36hj8.jpg"
+                alt="Theme park adventure"
+                className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                <div className="p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                  <h3 className="text-2xl font-bold mb-2">Theme Park Adventures</h3>
+                  <p className="text-sm text-gray-200">Experience thrilling rides and unforgettable family fun</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer" onClick={() => setLightboxImage('/travel-highlights/att.x3if5_sprny5apwypkqlgoaewyk0mcmrrwuk7tpshh8.jpg')}>
+              <img
+                src="/travel-highlights/att.x3if5_sprny5apwypkqlgoaewyk0mcmrrwuk7tpshh8.jpg"
+                alt="Luxury resort at twilight"
+                className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                <div className="p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                  <h3 className="text-2xl font-bold mb-2">Luxury Getaways</h3>
+                  <p className="text-sm text-gray-200">Indulge in opulent resorts with world-class amenities</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer" onClick={() => setLightboxImage('/travel-highlights/att.whax4ccwco_dubtgp8uxdn8rbp96xd97gf97ceoxscc.jpg')}>
+              <img
+                src="/travel-highlights/att.whax4ccwco_dubtgp8uxdn8rbp96xd97gf97ceoxscc.jpg"
+                alt="African safari with giraffes"
+                className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                <div className="p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                  <h3 className="text-2xl font-bold mb-2">Safari Expeditions</h3>
+                  <p className="text-sm text-gray-200">Witness majestic wildlife in their natural habitat</p>
                 </div>
               </div>
             </div>
@@ -510,6 +573,27 @@ function App() {
       >
         <Phone className="h-6 w-6" />
       </a>
+
+      {lightboxImage && (
+        <div
+          className="fixed inset-0 bg-black/90 z-[100] flex items-center justify-center p-4 animate-fadeIn"
+          onClick={() => setLightboxImage(null)}
+        >
+          <button
+            className="absolute top-4 right-4 text-white hover:text-yellow-400 transition-colors p-2"
+            onClick={() => setLightboxImage(null)}
+            aria-label="Close lightbox"
+          >
+            <X className="h-8 w-8" />
+          </button>
+          <img
+            src={lightboxImage}
+            alt="Enlarged view"
+            className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
     </div>
   );
 }
