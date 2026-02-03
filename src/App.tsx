@@ -31,7 +31,7 @@ function App() {
   ];
 
   const testimonials = [
-    { name: 'Sarah Johnson', rating: 5, text: 'ZEMKAY TRAVELS made our dream vacation a reality. Professional, responsive, and affordable!' },
+    { name: 'Sarah Johnson', rating: 5, text: 'ZEmKay Travels made our dream vacation a reality. Professional, responsive, and affordable!' },
     { name: 'Michael Chen', rating: 5, text: 'Excellent service from start to finish. They handled everything and we had an amazing safari experience.' },
     { name: 'Emily Rodriguez', rating: 5, text: 'Best travel agency we have worked with. Highly recommend for stress-free vacation planning!' },
   ];
@@ -44,7 +44,7 @@ function App() {
             <div className="flex items-center">
               <img
                 src="/att.onsvfgdls5qh_vzm-hvfcymdr-za-ajc_rgv9gbwon0.jpg"
-                alt="ZEMKAY TRAVELS Logo"
+                alt="ZEmKay Travels Logo"
                 className="h-14 md:h-16 w-auto object-contain"
               />
             </div>
@@ -53,6 +53,7 @@ function App() {
               <a href="#home" className="text-gray-700 hover:text-yellow-600 transition-colors font-medium">Home</a>
               <a href="#about" className="text-gray-700 hover:text-yellow-600 transition-colors font-medium">About</a>
               <a href="#services" className="text-gray-700 hover:text-yellow-600 transition-colors font-medium">Services</a>
+              <a href="#gallery" className="text-gray-700 hover:text-yellow-600 transition-colors font-medium">Gallery</a>
               <a href="#testimonials" className="text-gray-700 hover:text-yellow-600 transition-colors font-medium">Testimonials</a>
               <a href="#contact" className="text-gray-700 hover:text-yellow-600 transition-colors font-medium">Contact</a>
               <a
@@ -76,6 +77,7 @@ function App() {
               <a href="#home" className="block text-gray-700 hover:text-yellow-600 transition-colors font-medium">Home</a>
               <a href="#about" className="block text-gray-700 hover:text-yellow-600 transition-colors font-medium">About</a>
               <a href="#services" className="block text-gray-700 hover:text-yellow-600 transition-colors font-medium">Services</a>
+              <a href="#gallery" className="block text-gray-700 hover:text-yellow-600 transition-colors font-medium">Gallery</a>
               <a href="#testimonials" className="block text-gray-700 hover:text-yellow-600 transition-colors font-medium">Testimonials</a>
               <a href="#contact" className="block text-gray-700 hover:text-yellow-600 transition-colors font-medium">Contact</a>
             </div>
@@ -88,7 +90,7 @@ function App() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 animate-fadeIn leading-tight">
-              Your Trusted Travel Partner
+              Travel Made Easy. Memories Made Forever.
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 mb-10 animate-fadeIn" style={{ animationDelay: '0.2s' }}>
               Flights, Hotels, Cruises, Safaris & Vacation Packages
@@ -115,15 +117,15 @@ function App() {
       <section id="about" className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">About ZEMKAY TRAVELS</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">About ZEmKay Travels</h2>
             <p className="text-xl text-gray-600 leading-relaxed mb-6">
-              At ZemKay Travels, we're a family-operated travel company built on a love for exploring the world and creating meaningful experiences together. We believe travel should feel exciting, effortless, and deeply personal.
+              At ZEmKay Travels, we're a family-operated travel company built on a love for exploring the world and creating meaningful experiences together. We believe travel should feel exciting, effortless, and deeply personal.
             </p>
             <p className="text-xl text-gray-600 leading-relaxed mb-6">
               Because we're family-run, we treat every client like one of our own—taking the time to understand your vision and handling every detail with care. Whether you're dreaming of a relaxing getaway, an adventurous escape, or a once-in-a-lifetime journey, we design trips that fit your style, budget, and goals.
             </p>
             <p className="text-xl text-gray-600 leading-relaxed mb-6">
-              From curated itineraries to trusted guidance, we take the stress out of planning so you can focus on making memories. With ZemKay Travels, you're not just booking a trip—you're traveling with heart, intention, and confidence.
+              From curated itineraries to trusted guidance, we take the stress out of planning so you can focus on making memories. With ZEmKay Travels, you're not just booking a trip—you're traveling with heart, intention, and confidence.
             </p>
             <p className="text-xl text-gray-600 leading-relaxed">
               Let's explore the world together. 🌍✈️
@@ -155,11 +157,96 @@ function App() {
         </div>
       </section>
 
+      <section id="gallery" className="py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Travel Highlights</h2>
+            <p className="text-xl text-gray-600">Discover the world's most incredible destinations</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+            <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+              <img
+                src="/att.fajhgn0tncyybm-i-t3bidnsdzz7eoomvu2e9wwn-m4.jpg"
+                alt="Scenic train journey through mountains"
+                className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                <div className="p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                  <h3 className="text-2xl font-bold mb-2">Scenic Rail Adventures</h3>
+                  <p className="text-sm text-gray-200">Experience breathtaking journeys through majestic landscapes</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+              <img
+                src="/att.gxrkznv34waxxccbpebxznimiupd5cvonnf1s-c9cye.jpg"
+                alt="Luxury tropical resort with infinity pool"
+                className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                <div className="p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                  <h3 className="text-2xl font-bold mb-2">Luxury Resorts</h3>
+                  <p className="text-sm text-gray-200">Unwind in paradise at world-class tropical destinations</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+              <img
+                src="/att.utccchx9pocvo8kc1mgft7rplqlsevxlhu7hd9cnoae.jpg"
+                alt="Pristine tropical beach with palm trees"
+                className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                <div className="p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                  <h3 className="text-2xl font-bold mb-2">Beach Getaways</h3>
+                  <p className="text-sm text-gray-200">Relax on pristine shores with crystal-clear waters</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+              <img
+                src="/att.lnujmnwhwkyk7d9h904ugpbictv9esj9o4pv80onnfc.jpg"
+                alt="Premium rental car fleet"
+                className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                <div className="p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                  <h3 className="text-2xl font-bold mb-2">Car Rentals</h3>
+                  <p className="text-sm text-gray-200">Choose from our premium fleet for ultimate comfort</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 md:col-span-2 lg:col-span-2">
+              <img
+                src="/att.qbtzfofebwplljk1uktgmvifpnslsst2odj81srhjba.jpg"
+                alt="Sacred pilgrimage destination"
+                className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                <div className="p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                  <h3 className="text-2xl font-bold mb-2">Religious Pilgrimages</h3>
+                  <p className="text-sm text-gray-200">Fulfill your spiritual journey with our guided pilgrimage packages</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-24 bg-gradient-to-br from-emerald-600 to-green-700 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsIDI1NSwgMjU1LCAwLjEpIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-20"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Choose ZEMKAY TRAVELS?</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Choose ZEmKay Travels?</h2>
             <p className="text-xl text-emerald-100">Your satisfaction is our priority</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
@@ -349,7 +436,7 @@ function App() {
               <div className="mb-4">
                 <img
                   src="/att.onsvfgdls5qh_vzm-hvfcymdr-za-ajc_rgv9gbwon0.jpg"
-                  alt="ZEMKAY TRAVELS Logo"
+                  alt="ZEmKay Travels Logo"
                   className="h-16 w-auto object-contain"
                 />
               </div>
@@ -362,6 +449,7 @@ function App() {
                 <li><a href="#home" className="text-gray-400 hover:text-yellow-400 transition-colors">Home</a></li>
                 <li><a href="#about" className="text-gray-400 hover:text-yellow-400 transition-colors">About</a></li>
                 <li><a href="#services" className="text-gray-400 hover:text-yellow-400 transition-colors">Services</a></li>
+                <li><a href="#gallery" className="text-gray-400 hover:text-yellow-400 transition-colors">Gallery</a></li>
                 <li><a href="#contact" className="text-gray-400 hover:text-yellow-400 transition-colors">Contact</a></li>
               </ul>
             </div>
@@ -409,7 +497,7 @@ function App() {
           </div>
 
           <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 ZEMKAY TRAVELS. All rights reserved.</p>
+            <p>&copy; 2024 ZEmKay Travels. All rights reserved.</p>
           </div>
         </div>
       </footer>
