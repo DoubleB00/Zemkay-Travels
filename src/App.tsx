@@ -39,7 +39,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-white">
-      <header className="fixed top-0 w-full bg-yellow-600 shadow-md z-50 transition-all duration-300 border-b-2 border-yellow-700">
+      <header className="fixed top-0 w-full shadow-md z-50 transition-all duration-300 border-b-2" style={{ backgroundColor: '#FFCC00', borderColor: '#FFCC00' }}>
         <nav className="container mx-auto px-4 py-3">
           <div className="flex justify-between items-center">
             <div className="flex items-center">
@@ -51,13 +51,13 @@ function App() {
             </div>
 
             <div className="hidden md:flex items-center space-x-6">
-              <a href="#home" className="text-white hover:text-gray-100 transition-colors font-medium">Home</a>
-              <a href="#about" className="text-white hover:text-gray-100 transition-colors font-medium">About</a>
-              <a href="#services" className="text-white hover:text-gray-100 transition-colors font-medium">Services</a>
-              <a href="#what-we-offer" className="text-white hover:text-gray-100 transition-colors font-medium">What We Offer</a>
-              <a href="#gallery" className="text-white hover:text-gray-100 transition-colors font-medium">Gallery</a>
-              <a href="#testimonials" className="text-white hover:text-gray-100 transition-colors font-medium">Testimonials</a>
-              <a href="#contact" className="text-white hover:text-gray-100 transition-colors font-medium">Contact</a>
+              <a href="#home" className="text-gray-900 hover:text-gray-700 transition-colors font-medium">Home</a>
+              <a href="#about" className="text-gray-900 hover:text-gray-700 transition-colors font-medium">About</a>
+              <a href="#services" className="text-gray-900 hover:text-gray-700 transition-colors font-medium">Services</a>
+              <a href="#what-we-offer" className="text-gray-900 hover:text-gray-700 transition-colors font-medium">What We Offer</a>
+              <a href="#gallery" className="text-gray-900 hover:text-gray-700 transition-colors font-medium">Gallery</a>
+              <a href="#testimonials" className="text-gray-900 hover:text-gray-700 transition-colors font-medium">Testimonials</a>
+              <a href="#contact" className="text-gray-900 hover:text-gray-700 transition-colors font-medium">Contact</a>
               <a
                 href="tel:5162340786"
                 className="bg-gradient-to-r from-green-600 via-green-700 to-green-600 text-white px-6 py-2.5 rounded-full hover:shadow-lg transition-all duration-300 font-semibold border-2 border-green-700"
@@ -67,7 +67,7 @@ function App() {
             </div>
 
             <button
-              className="md:hidden text-white"
+              className="md:hidden text-gray-900"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -76,13 +76,13 @@ function App() {
 
           {isMenuOpen && (
             <div className="md:hidden mt-4 pb-4 space-y-4 animate-fadeIn">
-              <a href="#home" className="block text-white hover:text-gray-100 transition-colors font-medium">Home</a>
-              <a href="#about" className="block text-white hover:text-gray-100 transition-colors font-medium">About</a>
-              <a href="#services" className="block text-white hover:text-gray-100 transition-colors font-medium">Services</a>
-              <a href="#what-we-offer" className="block text-white hover:text-gray-100 transition-colors font-medium">What We Offer</a>
-              <a href="#gallery" className="block text-white hover:text-gray-100 transition-colors font-medium">Gallery</a>
-              <a href="#testimonials" className="block text-white hover:text-gray-100 transition-colors font-medium">Testimonials</a>
-              <a href="#contact" className="block text-white hover:text-gray-100 transition-colors font-medium">Contact</a>
+              <a href="#home" className="block text-gray-900 hover:text-gray-700 transition-colors font-medium">Home</a>
+              <a href="#about" className="block text-gray-900 hover:text-gray-700 transition-colors font-medium">About</a>
+              <a href="#services" className="block text-gray-900 hover:text-gray-700 transition-colors font-medium">Services</a>
+              <a href="#what-we-offer" className="block text-gray-900 hover:text-gray-700 transition-colors font-medium">What We Offer</a>
+              <a href="#gallery" className="block text-gray-900 hover:text-gray-700 transition-colors font-medium">Gallery</a>
+              <a href="#testimonials" className="block text-gray-900 hover:text-gray-700 transition-colors font-medium">Testimonials</a>
+              <a href="#contact" className="block text-gray-900 hover:text-gray-700 transition-colors font-medium">Contact</a>
             </div>
           )}
         </nav>
@@ -101,7 +101,8 @@ function App() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fadeIn" style={{ animationDelay: '0.4s' }}>
               <a
                 href="#contact"
-                className="bg-gradient-to-r from-yellow-500 via-yellow-600 to-yellow-500 text-white px-10 py-4 rounded-full text-lg font-bold hover:shadow-xl transform hover:scale-105 transition-all duration-300 border-2 border-yellow-600"
+                className="text-white px-10 py-4 rounded-full text-lg font-bold hover:shadow-xl transform hover:scale-105 transition-all duration-300 border-2"
+                style={{ backgroundColor: '#FFCC00', borderColor: '#FFCC00', color: '#1A1A1A' }}
               >
                 Get a Free Quote
               </a>
@@ -147,9 +148,10 @@ function App() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 group border-t-4 border-yellow-500"
+                className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 group border-t-4"
+                style={{ borderTopColor: '#FFCC00' }}
               >
-                <div className="bg-gradient-to-br from-emerald-100 to-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300" style={{ background: 'linear-gradient(to bottom right, #d1fae5, #fff4cc)' }}>
                   <service.icon className="h-8 w-8 text-emerald-600" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
@@ -320,7 +322,7 @@ function App() {
                 key={index}
                 className="text-center group hover:scale-105 transition-transform duration-300"
               >
-                <div className="bg-white/10 backdrop-blur-sm w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-yellow-500/30 transition-colors duration-300 border-2 border-white/20">
+                <div className="bg-white/10 backdrop-blur-sm w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-white/20 transition-colors duration-300 border-2 border-white/20">
                   <feature.icon className="h-10 w-10" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
@@ -421,11 +423,12 @@ function App() {
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="bg-gradient-to-br from-emerald-50 to-yellow-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-t-4 border-yellow-500"
+                className="bg-gradient-to-br from-emerald-50 via-white to-emerald-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-t-4"
+                style={{ borderTopColor: '#FFCC00' }}
               >
                 <div className="flex mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-yellow-500 text-yellow-500" />
+                    <Star key={i} className="h-5 w-5" style={{ fill: '#FFCC00', color: '#FFCC00' }} />
                   ))}
                 </div>
                 <p className="text-gray-700 mb-4 italic text-lg">"{testimonial.text}"</p>
@@ -446,7 +449,8 @@ function App() {
                 href="https://www.facebook.com/share/188jDNNzhN/?mibextid=wwXIfr"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center justify-center gap-3 bg-white px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-2 border-yellow-500"
+                className="group flex items-center justify-center gap-3 bg-white px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-2"
+                style={{ borderColor: '#FFCC00' }}
               >
                 <div className="bg-gradient-to-br from-blue-500 to-blue-600 p-3 rounded-full group-hover:scale-110 transition-transform duration-300">
                   <Facebook className="h-6 w-6 text-white" fill="white" />
@@ -457,7 +461,8 @@ function App() {
                 href="https://www.instagram.com/zemkaytravels?igsh=dmhldmV6dTEyYzYw"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center justify-center gap-3 bg-white px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-2 border-yellow-500"
+                className="group flex items-center justify-center gap-3 bg-white px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-2"
+                style={{ borderColor: '#FFCC00' }}
               >
                 <div className="bg-gradient-to-br from-pink-500 via-purple-500 to-orange-500 p-3 rounded-full group-hover:scale-110 transition-transform duration-300">
                   <Instagram className="h-6 w-6 text-white" />
@@ -480,8 +485,8 @@ function App() {
             <div className="grid md:grid-cols-2 gap-12">
               <div className="space-y-8">
                 <div className="flex items-start space-x-4 bg-white p-6 rounded-2xl shadow-md">
-                  <div className="bg-gradient-to-br from-yellow-400 to-yellow-600 p-4 rounded-full">
-                    <Phone className="h-7 w-7 text-white" />
+                  <div className="p-4 rounded-full" style={{ background: '#FFCC00' }}>
+                    <Phone className="h-7 w-7" style={{ color: '#1A1A1A' }} />
                   </div>
                   <div>
                     <h3 className="font-bold text-gray-900 mb-2 text-lg">Phone</h3>
@@ -511,7 +516,7 @@ function App() {
                 </div>
               </div>
 
-              <form onSubmit={handleSubmit} className="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-yellow-500">
+              <form onSubmit={handleSubmit} className="bg-white p-8 rounded-2xl shadow-xl border-t-4" style={{ borderTopColor: '#FFCC00' }}>
                 <div className="space-y-5">
                   <div>
                     <label htmlFor="name" className="block text-gray-700 font-semibold mb-2">Name</label>
@@ -521,7 +526,7 @@ function App() {
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 outline-none transition-all"
+                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 gold-focus outline-none transition-all"
                       placeholder="Your Name"
                     />
                   </div>
@@ -533,7 +538,7 @@ function App() {
                       required
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 outline-none transition-all"
+                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 gold-focus outline-none transition-all"
                       placeholder="your@email.com"
                     />
                   </div>
@@ -545,7 +550,7 @@ function App() {
                       required
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 outline-none transition-all"
+                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 gold-focus outline-none transition-all"
                       placeholder="(123) 456-7890"
                     />
                   </div>
@@ -557,13 +562,14 @@ function App() {
                       rows={4}
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 outline-none transition-all resize-none"
+                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 gold-focus outline-none transition-all resize-none"
                       placeholder="Tell us about your dream vacation..."
                     />
                   </div>
                   <button
                     type="submit"
-                    className="w-full bg-gradient-to-r from-yellow-500 via-yellow-600 to-yellow-500 text-white py-4 rounded-lg font-bold text-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 border-2 border-yellow-600"
+                    className="w-full py-4 rounded-lg font-bold text-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 border-2"
+                    style={{ backgroundColor: '#FFCC00', borderColor: '#FFCC00', color: '#1A1A1A' }}
                   >
                     Send Message
                   </button>
@@ -574,7 +580,7 @@ function App() {
         </div>
       </section>
 
-      <footer className="bg-gray-900 text-white py-12 border-t-4 border-yellow-500">
+      <footer className="bg-gray-900 text-white py-12 border-t-4" style={{ borderTopColor: '#FFCC00' }}>
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
@@ -589,41 +595,41 @@ function App() {
             </div>
 
             <div>
-              <h3 className="text-xl font-bold mb-4 text-yellow-400">Quick Links</h3>
+              <h3 className="text-xl font-bold mb-4" style={{ color: '#FFCC00' }}>Quick Links</h3>
               <ul className="space-y-2">
-                <li><a href="#home" className="text-gray-400 hover:text-yellow-400 transition-colors">Home</a></li>
-                <li><a href="#about" className="text-gray-400 hover:text-yellow-400 transition-colors">About</a></li>
-                <li><a href="#services" className="text-gray-400 hover:text-yellow-400 transition-colors">Services</a></li>
-                <li><a href="#what-we-offer" className="text-gray-400 hover:text-yellow-400 transition-colors">What We Offer</a></li>
-                <li><a href="#gallery" className="text-gray-400 hover:text-yellow-400 transition-colors">Gallery</a></li>
-                <li><a href="#contact" className="text-gray-400 hover:text-yellow-400 transition-colors">Contact</a></li>
+                <li><a href="#home" className="text-gray-400 transition-colors hover-gold">Home</a></li>
+                <li><a href="#about" className="text-gray-400 transition-colors hover-gold">About</a></li>
+                <li><a href="#services" className="text-gray-400 transition-colors hover-gold">Services</a></li>
+                <li><a href="#what-we-offer" className="text-gray-400 transition-colors hover-gold">What We Offer</a></li>
+                <li><a href="#gallery" className="text-gray-400 transition-colors hover-gold">Gallery</a></li>
+                <li><a href="#contact" className="text-gray-400 transition-colors hover-gold">Contact</a></li>
               </ul>
             </div>
 
             <div>
-              <h3 className="text-xl font-bold mb-4 text-yellow-400">Contact Us</h3>
+              <h3 className="text-xl font-bold mb-4" style={{ color: '#FFCC00' }}>Contact Us</h3>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-center space-x-2">
-                  <Phone className="h-5 w-5 text-yellow-400" />
-                  <a href="tel:5162340786" className="text-gray-400 hover:text-yellow-400 transition-colors font-semibold">
+                  <Phone className="h-5 w-5" style={{ color: '#FFCC00' }} />
+                  <a href="tel:5162340786" className="text-gray-400 transition-colors font-semibold hover-gold">
                     (516) 234-0786
                   </a>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <MapPin className="h-5 w-5 text-yellow-400" />
-                  <a href="https://www.zemkaytravels.com" className="text-gray-400 hover:text-yellow-400 transition-colors">
+                  <MapPin className="h-5 w-5" style={{ color: '#FFCC00' }} />
+                  <a href="https://www.zemkaytravels.com" className="text-gray-400 transition-colors hover-gold">
                     www.zemkaytravels.com
                   </a>
                 </li>
               </ul>
               <div>
-                <h4 className="text-lg font-bold mb-3 text-yellow-400">Follow Us</h4>
+                <h4 className="text-lg font-bold mb-3" style={{ color: '#FFCC00' }}>Follow Us</h4>
                 <div className="flex gap-3">
                   <a
                     href="https://www.facebook.com/share/188jDNNzhN/?mibextid=wwXIfr"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-gray-800 p-3 rounded-full hover:bg-yellow-500 transition-all duration-300 transform hover:scale-110"
+                    className="bg-gray-800 p-3 rounded-full transition-all duration-300 transform hover:scale-110 hover-gold-bg"
                     aria-label="Follow us on Facebook"
                   >
                     <Facebook className="h-5 w-5 text-white" fill="white" />
@@ -663,7 +669,7 @@ function App() {
           onClick={() => setLightboxImage(null)}
         >
           <button
-            className="absolute top-4 right-4 text-white hover:text-yellow-400 transition-colors p-2"
+            className="absolute top-4 right-4 text-white transition-colors p-2 hover-gold"
             onClick={() => setLightboxImage(null)}
             aria-label="Close lightbox"
           >
