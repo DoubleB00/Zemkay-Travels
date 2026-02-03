@@ -39,34 +39,34 @@ function App() {
 
   return (
     <div className="min-h-screen bg-white">
-      <header className="fixed top-0 w-full bg-white shadow-md z-50 transition-all duration-300 border-b-2 border-yellow-500">
+      <header className="fixed top-0 w-full bg-yellow-600 shadow-md z-50 transition-all duration-300 border-b-2 border-yellow-700">
         <nav className="container mx-auto px-4 py-3">
           <div className="flex justify-between items-center">
             <div className="flex items-center">
               <img
                 src="/att.onsvfgdls5qh_vzm-hvfcymdr-za-ajc_rgv9gbwon0.jpg"
                 alt="ZEmKay Travels Logo"
-                className="h-14 md:h-16 w-auto object-contain"
+                className="h-20 md:h-24 w-auto object-contain"
               />
             </div>
 
             <div className="hidden md:flex items-center space-x-6">
-              <a href="#home" className="text-gray-700 hover:text-yellow-600 transition-colors font-medium">Home</a>
-              <a href="#about" className="text-gray-700 hover:text-yellow-600 transition-colors font-medium">About</a>
-              <a href="#services" className="text-gray-700 hover:text-yellow-600 transition-colors font-medium">Services</a>
-              <a href="#gallery" className="text-gray-700 hover:text-yellow-600 transition-colors font-medium">Gallery</a>
-              <a href="#testimonials" className="text-gray-700 hover:text-yellow-600 transition-colors font-medium">Testimonials</a>
-              <a href="#contact" className="text-gray-700 hover:text-yellow-600 transition-colors font-medium">Contact</a>
+              <a href="#home" className="text-white hover:text-gray-100 transition-colors font-medium">Home</a>
+              <a href="#about" className="text-white hover:text-gray-100 transition-colors font-medium">About</a>
+              <a href="#services" className="text-white hover:text-gray-100 transition-colors font-medium">Services</a>
+              <a href="#gallery" className="text-white hover:text-gray-100 transition-colors font-medium">Gallery</a>
+              <a href="#testimonials" className="text-white hover:text-gray-100 transition-colors font-medium">Testimonials</a>
+              <a href="#contact" className="text-white hover:text-gray-100 transition-colors font-medium">Contact</a>
               <a
                 href="tel:5162340786"
-                className="bg-gradient-to-r from-yellow-500 via-yellow-600 to-yellow-500 text-white px-6 py-2.5 rounded-full hover:shadow-lg transition-all duration-300 font-semibold border-2 border-yellow-600"
+                className="bg-gradient-to-r from-green-600 via-green-700 to-green-600 text-white px-6 py-2.5 rounded-full hover:shadow-lg transition-all duration-300 font-semibold border-2 border-green-700"
               >
                 Call Now
               </a>
             </div>
 
             <button
-              className="md:hidden text-gray-700"
+              className="md:hidden text-white"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -75,12 +75,12 @@ function App() {
 
           {isMenuOpen && (
             <div className="md:hidden mt-4 pb-4 space-y-4 animate-fadeIn">
-              <a href="#home" className="block text-gray-700 hover:text-yellow-600 transition-colors font-medium">Home</a>
-              <a href="#about" className="block text-gray-700 hover:text-yellow-600 transition-colors font-medium">About</a>
-              <a href="#services" className="block text-gray-700 hover:text-yellow-600 transition-colors font-medium">Services</a>
-              <a href="#gallery" className="block text-gray-700 hover:text-yellow-600 transition-colors font-medium">Gallery</a>
-              <a href="#testimonials" className="block text-gray-700 hover:text-yellow-600 transition-colors font-medium">Testimonials</a>
-              <a href="#contact" className="block text-gray-700 hover:text-yellow-600 transition-colors font-medium">Contact</a>
+              <a href="#home" className="block text-white hover:text-gray-100 transition-colors font-medium">Home</a>
+              <a href="#about" className="block text-white hover:text-gray-100 transition-colors font-medium">About</a>
+              <a href="#services" className="block text-white hover:text-gray-100 transition-colors font-medium">Services</a>
+              <a href="#gallery" className="block text-white hover:text-gray-100 transition-colors font-medium">Gallery</a>
+              <a href="#testimonials" className="block text-white hover:text-gray-100 transition-colors font-medium">Testimonials</a>
+              <a href="#contact" className="block text-white hover:text-gray-100 transition-colors font-medium">Contact</a>
             </div>
           )}
         </nav>
@@ -90,7 +90,7 @@ function App() {
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyMTIsIDE3NSwgNTUsIDAuMSkiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] opacity-30"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 animate-fadeIn leading-tight">
+            <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 animate-fadeIn leading-tight font-['Poppins']">
               Travel Made Easy. Memories Made Forever.
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 mb-10 animate-fadeIn" style={{ animationDelay: '0.2s' }}>
@@ -567,7 +567,7 @@ function App() {
 
       <a
         href="tel:5162340786"
-        className="fixed bottom-6 right-6 bg-gradient-to-r from-yellow-500 via-yellow-600 to-yellow-500 text-white p-5 rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-300 z-50 animate-bounce border-2 border-yellow-600"
+        className="fixed bottom-6 right-6 bg-gradient-to-r from-green-600 via-green-700 to-green-600 text-white p-5 rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-300 z-50 animate-bounce border-2 border-green-700"
         style={{ animationDuration: '3s' }}
         aria-label="Call us at (516) 234-0786"
       >
