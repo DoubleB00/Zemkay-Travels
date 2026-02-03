@@ -120,7 +120,7 @@ function App() {
 
       {/* Banner Separator */}
       <section
-        className="relative overflow-hidden"
+        className="relative"
         style={{
           width: '100vw',
           position: 'relative',
@@ -128,18 +128,22 @@ function App() {
           right: '50%',
           marginLeft: '-50vw',
           marginRight: '-50vw',
-          height: 'clamp(180px, 22vw, 280px)'
+          height: 'clamp(160px, 20vw, 280px)',
+          backgroundImage: `linear-gradient(90deg,
+            rgba(237, 245, 255, 1) 0%,
+            rgba(237, 245, 255, 0.3) 15%,
+            rgba(237, 245, 255, 0.3) 85%,
+            rgba(237, 245, 255, 1) 100%),
+            url('/att.ey117fo0kzzpc69gbvw5icflkk9zeieaxr0tuvedfuo.jpg')`,
+          backgroundColor: '#edf5ff',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
+          backgroundSize: 'contain'
         }}
-      >
-        <img
-          src="/att.ey117fo0kzzpc69gbvw5icflkk9zeieaxr0tuvedfuo.jpg"
-          srcSet="/att.ey117fo0kzzpc69gbvw5icflkk9zeieaxr0tuvedfuo.jpg 1x, /att.ey117fo0kzzpc69gbvw5icflkk9zeieaxr0tuvedfuo.jpg 2x"
-          alt="Airplane soaring through beautiful sky - ZEmKay Travels"
-          className="w-full h-full object-cover object-center"
-          loading="lazy"
-          style={{ imageRendering: 'crisp-edges' }}
-        />
-      </section>
+        role="img"
+        aria-label="Airplane soaring through beautiful sky - ZEmKay Travels"
+      />
+
 
       <section id="about" className="py-24 bg-white relative overflow-hidden">
         <div
