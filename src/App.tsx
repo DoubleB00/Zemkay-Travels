@@ -54,6 +54,7 @@ function App() {
               <a href="#home" className="text-white hover:text-gray-100 transition-colors font-medium">Home</a>
               <a href="#about" className="text-white hover:text-gray-100 transition-colors font-medium">About</a>
               <a href="#services" className="text-white hover:text-gray-100 transition-colors font-medium">Services</a>
+              <a href="#what-we-offer" className="text-white hover:text-gray-100 transition-colors font-medium">What We Offer</a>
               <a href="#gallery" className="text-white hover:text-gray-100 transition-colors font-medium">Gallery</a>
               <a href="#testimonials" className="text-white hover:text-gray-100 transition-colors font-medium">Testimonials</a>
               <a href="#contact" className="text-white hover:text-gray-100 transition-colors font-medium">Contact</a>
@@ -78,6 +79,7 @@ function App() {
               <a href="#home" className="block text-white hover:text-gray-100 transition-colors font-medium">Home</a>
               <a href="#about" className="block text-white hover:text-gray-100 transition-colors font-medium">About</a>
               <a href="#services" className="block text-white hover:text-gray-100 transition-colors font-medium">Services</a>
+              <a href="#what-we-offer" className="block text-white hover:text-gray-100 transition-colors font-medium">What We Offer</a>
               <a href="#gallery" className="block text-white hover:text-gray-100 transition-colors font-medium">Gallery</a>
               <a href="#testimonials" className="block text-white hover:text-gray-100 transition-colors font-medium">Testimonials</a>
               <a href="#contact" className="block text-white hover:text-gray-100 transition-colors font-medium">Contact</a>
@@ -329,6 +331,86 @@ function App() {
         </div>
       </section>
 
+      <section id="what-we-offer" className="py-20 md:py-24" style={{ backgroundColor: '#F6F3EE' }}>
+        <div className="container mx-auto px-4">
+          <div className="max-w-[680px] mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-16 text-center font-playfair">
+              What We Offer
+            </h2>
+
+            <div className="space-y-16 md:space-y-20">
+              <div className="text-center">
+                <div className="mb-6">
+                  <img
+                    src="https://images.pexels.com/photos/7433822/pexels-photo-7433822.jpeg?auto=compress&cs=tinysrgb&w=800"
+                    alt="Custom travel itinerary planning"
+                    className="w-[220px] h-[220px] md:w-[260px] md:h-[260px] rounded-full object-cover mx-auto shadow-lg"
+                    loading="lazy"
+                  />
+                </div>
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 font-playfair">
+                  Custom Itineraries
+                </h3>
+                <p className="text-base md:text-lg text-gray-700 leading-relaxed font-lato" style={{ lineHeight: '1.7' }}>
+                  Every traveler is unique, and your trip should be too. We'll design a personalized itinerary that matches your style—whether that's a multi-city European adventure, a quick weekend escape, or a once-in-a-lifetime family trip.
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="mb-6">
+                  <img
+                    src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=800"
+                    alt="Group travel and celebrations"
+                    className="w-[220px] h-[220px] md:w-[260px] md:h-[260px] rounded-full object-cover mx-auto shadow-lg"
+                    loading="lazy"
+                  />
+                </div>
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 font-playfair">
+                  Group Travel
+                </h3>
+                <p className="text-base md:text-lg text-gray-700 leading-relaxed font-lato" style={{ lineHeight: '1.7' }}>
+                  From milestone celebrations to team getaways, we take the stress out of organizing for a crowd. We'll handle the logistics so your group can focus on making memories together.
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="mb-6">
+                  <img
+                    src="https://images.pexels.com/photos/163236/luxury-yacht-boat-speed-water-163236.jpeg?auto=compress&cs=tinysrgb&w=800"
+                    alt="Cruise ship at sunset"
+                    className="w-[220px] h-[220px] md:w-[260px] md:h-[260px] rounded-full object-cover mx-auto shadow-lg"
+                    loading="lazy"
+                  />
+                </div>
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 font-playfair">
+                  Cruises
+                </h3>
+                <p className="text-base md:text-lg text-gray-700 leading-relaxed font-lato" style={{ lineHeight: '1.7' }}>
+                  Set sail with ease! Whether you're dreaming of a Caribbean escape, an Alaskan adventure, or a European river cruise, we'll help you choose the perfect sailing and add those little extras that make the journey even more special.
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="mb-6">
+                  <img
+                    src="https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=800"
+                    alt="Luxury resort with infinity pool"
+                    className="w-[220px] h-[220px] md:w-[260px] md:h-[260px] rounded-full object-cover mx-auto shadow-lg"
+                    loading="lazy"
+                  />
+                </div>
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 font-playfair">
+                  All-Inclusive Getaways
+                </h3>
+                <p className="text-base md:text-lg text-gray-700 leading-relaxed font-lato" style={{ lineHeight: '1.7' }}>
+                  Resorts, beaches, and relaxation made effortless. We'll match you with the best all-inclusive destinations so you can unwind, indulge, and enjoy—without worrying about the details.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="testimonials" className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -512,6 +594,7 @@ function App() {
                 <li><a href="#home" className="text-gray-400 hover:text-yellow-400 transition-colors">Home</a></li>
                 <li><a href="#about" className="text-gray-400 hover:text-yellow-400 transition-colors">About</a></li>
                 <li><a href="#services" className="text-gray-400 hover:text-yellow-400 transition-colors">Services</a></li>
+                <li><a href="#what-we-offer" className="text-gray-400 hover:text-yellow-400 transition-colors">What We Offer</a></li>
                 <li><a href="#gallery" className="text-gray-400 hover:text-yellow-400 transition-colors">Gallery</a></li>
                 <li><a href="#contact" className="text-gray-400 hover:text-yellow-400 transition-colors">Contact</a></li>
               </ul>

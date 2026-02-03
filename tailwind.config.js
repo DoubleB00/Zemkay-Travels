@@ -5,6 +5,8 @@ export default {
     extend: {
       fontFamily: {
         'hero': ['Poppins', 'sans-serif'],
+        'playfair': ['Playfair Display', 'serif'],
+        'lato': ['Lato', 'sans-serif'],
       },
     },
   },
