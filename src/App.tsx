@@ -119,15 +119,16 @@ function App() {
       </section>
 
       {/* Banner Separator */}
-      <section className="w-full overflow-hidden">
-        <div className="relative w-full h-[140px] md:h-[220px]">
+      <section className="w-full bg-gradient-to-b from-sky-50 to-white">
+        <div className="relative w-full h-[140px] md:h-[240px] flex items-center justify-center">
           <img
             src="/att.ey117fo0kzzpc69gbvw5icflkk9zeieaxr0tuvedfuo.jpg"
+            srcSet="/att.ey117fo0kzzpc69gbvw5icflkk9zeieaxr0tuvedfuo.jpg 1x, /att.ey117fo0kzzpc69gbvw5icflkk9zeieaxr0tuvedfuo.jpg 2x"
             alt="Airplane soaring through beautiful sky - ZEmKay Travels"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-contain"
             loading="lazy"
+            style={{ imageRendering: 'crisp-edges' }}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
         </div>
       </section>
 
