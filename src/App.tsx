@@ -118,19 +118,16 @@ function App() {
         </div>
       </section>
 
-      {/* Feature Image Section */}
-      <section className="py-16 bg-gradient-to-br from-gray-50 to-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/20 to-transparent z-10"></div>
-              <img
-                src="/att.ekaozfdo94bwivrd-mkfzwr9b5vh_ovrb2psmmsr1_8.jpg"
-                alt="Airplane soaring through beautiful sky - ZEmKay Travels"
-                className="w-full h-[400px] md:h-[500px] lg:h-[600px] object-cover"
-              />
-            </div>
-          </div>
+      {/* Banner Separator */}
+      <section className="w-full overflow-hidden">
+        <div className="relative w-full h-[140px] md:h-[220px]">
+          <img
+            src="/att.ey117fo0kzzpc69gbvw5icflkk9zeieaxr0tuvedfuo.jpg"
+            alt="Airplane soaring through beautiful sky - ZEmKay Travels"
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
         </div>
       </section>
 
