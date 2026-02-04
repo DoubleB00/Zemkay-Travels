@@ -120,29 +120,40 @@ function App() {
 
       {/* Banner Separator */}
       <section
-        className="relative"
+        className="relative w-full overflow-hidden"
         style={{
           width: '100vw',
           position: 'relative',
           left: '50%',
           right: '50%',
           marginLeft: '-50vw',
-          marginRight: '-50vw',
-          height: 'clamp(160px, 20vw, 280px)',
-          backgroundImage: `linear-gradient(90deg,
-            rgba(237, 245, 255, 1) 0%,
-            rgba(237, 245, 255, 0.3) 15%,
-            rgba(237, 245, 255, 0.3) 85%,
-            rgba(237, 245, 255, 1) 100%),
-            url('/att.ey117fo0kzzpc69gbvw5icflkk9zeieaxr0tuvedfuo.jpg')`,
-          backgroundColor: '#edf5ff',
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center',
-          backgroundSize: 'contain'
+          marginRight: '-50vw'
         }}
         role="img"
         aria-label="Airplane soaring through beautiful sky - ZEmKay Travels"
-      />
+      >
+        <div className="relative w-full" style={{ aspectRatio: '21/9' }}>
+          <img
+            src="/att.tzfd3825-uvdelpth2r9qgva8wqsboongp2gvxgthgo.jpg"
+            alt="Airplane wing view at sunset"
+            className="w-full h-full object-cover"
+            style={{
+              display: 'block',
+              maxWidth: '100%',
+              height: 'auto',
+              minHeight: '200px',
+              maxHeight: '400px'
+            }}
+            loading="eager"
+          />
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background: 'linear-gradient(90deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 20%, rgba(255,255,255,0) 80%, rgba(255,255,255,0.15) 100%)'
+            }}
+          />
+        </div>
+      </section>
 
 
       <section id="about" className="py-24 bg-white relative overflow-hidden">
