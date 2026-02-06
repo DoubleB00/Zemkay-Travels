@@ -199,52 +199,21 @@ Deno.serve(async (req: Request) => {
       </html>
     `;
 
-    let emailData;
-    let emailError;
+    const emailResponse = await resend.emails.send({
+      from: "ZEmKay Travels <contact@zemkaytravels.com>",
+      to: ["MKajee@ZEmKayTravels.com"],
+      subject: `New Contact Form Submission from ${name}`,
+      html: emailHtml,
+      replyTo: email,
+    });
 
-    try {
-      const emailResponse = await resend.emails.send({
-        from: "ZEmKay Travels Contact Form <onboarding@resend.dev>",
-        to: ["MKajee@ZEmKayTravels.com"],
-        subject: `New Contact Form Submission from ${name}`,
-        html: emailHtml,
-        replyTo: email,
-      });
-
-      emailData = emailResponse.data;
-      emailError = emailResponse.error;
-    } catch (error) {
-      console.error("Email sending failed:", error);
-      emailError = error;
+    if (emailResponse.error) {
+      console.error("Email error details:", emailResponse.error);
+      const errorMessage = emailResponse.error.message || JSON.stringify(emailResponse.error);
+      throw new Error(`Failed to send email: ${errorMessage}`);
     }
 
-    if (emailError) {
-      console.error("Email error details:", emailError);
-
-      const errorMessage = emailError.message || JSON.stringify(emailError);
-      if (errorMessage.includes("only send testing emails to your own email")) {
-        console.log("Attempting to send to verified email address instead...");
-
-        const fallbackResponse = await resend.emails.send({
-          from: "ZEmKay Travels Contact Form <onboarding@resend.dev>",
-          to: ["bbrian0325@gmail.com"],
-          subject: `[ZEmKay Travels] New Contact Form Submission from ${name}`,
-          html: emailHtml + `<p style="padding: 20px; background: #fff3cd; border-left: 4px solid #ffc107; margin-top: 20px;"><strong>Note:</strong> This email was sent to you because the domain is not yet verified. To receive emails at MKajee@ZEmKayTravels.com, please verify your domain in Resend.</p>`,
-          replyTo: email,
-        });
-
-        if (fallbackResponse.error) {
-          console.error("Fallback email also failed:", fallbackResponse.error);
-          throw new Error(`Failed to send email: ${errorMessage}`);
-        }
-
-        console.log("Email sent to fallback address successfully:", fallbackResponse.data);
-      } else {
-        throw new Error(`Failed to send email: ${errorMessage}`);
-      }
-    } else {
-      console.log("Email sent successfully to MKajee@ZEmKayTravels.com:", emailData);
-    }
+    console.log("Email sent successfully to MKajee@ZEmKayTravels.com:", emailResponse.data);
 
     return new Response(
       JSON.stringify({
