@@ -55,11 +55,69 @@ Deno.serve(async (req: Request) => {
       );
     }
 
+    // Validate required fields
     if (!name || !email || !message) {
       return new Response(
         JSON.stringify({
           success: false,
           error: "Name, email, and message are required"
+        }),
+        {
+          status: 400,
+          headers: { ...corsHeaders, "Content-Type": "application/json" },
+        }
+      );
+    }
+
+    // Validate field content matches RLS policy requirements
+    const trimmedName = name.trim();
+    const trimmedEmail = email.trim();
+    const trimmedMessage = message.trim();
+
+    if (trimmedName.length === 0) {
+      return new Response(
+        JSON.stringify({
+          success: false,
+          error: "Name cannot be empty"
+        }),
+        {
+          status: 400,
+          headers: { ...corsHeaders, "Content-Type": "application/json" },
+        }
+      );
+    }
+
+    if (trimmedEmail.length === 0 || !trimmedEmail.includes("@")) {
+      return new Response(
+        JSON.stringify({
+          success: false,
+          error: "Please provide a valid email address"
+        }),
+        {
+          status: 400,
+          headers: { ...corsHeaders, "Content-Type": "application/json" },
+        }
+      );
+    }
+
+    if (trimmedMessage.length < 10) {
+      return new Response(
+        JSON.stringify({
+          success: false,
+          error: "Message must be at least 10 characters long"
+        }),
+        {
+          status: 400,
+          headers: { ...corsHeaders, "Content-Type": "application/json" },
+        }
+      );
+    }
+
+    if (message.length > 10000) {
+      return new Response(
+        JSON.stringify({
+          success: false,
+          error: "Message is too long (maximum 10,000 characters)"
         }),
         {
           status: 400,
