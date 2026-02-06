@@ -15,18 +15,10 @@ function App() {
     setIsSubmitting(true);
 
     try {
-      const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-      const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
-
-      if (!supabaseUrl || !supabaseKey) {
-        throw new Error('Configuration error');
-      }
-
-      const response = await fetch(`${supabaseUrl}/functions/v1/contact-form`, {
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${supabaseKey}`
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify({
           name: formData.name,
