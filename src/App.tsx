@@ -3,14 +3,54 @@ import { Phone, MapPin, Menu, X, Plane, Hotel, Ship, Palmtree, Package, CheckCir
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
+  const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '', honeypot: '' });
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    alert('Thank you for contacting us! We will get back to you soon.');
-    setFormData({ name: '', email: '', phone: '', message: '' });
+
+    if (isSubmitting) return;
+
+    setIsSubmitting(true);
+
+    try {
+      const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+      const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+
+      if (!supabaseUrl || !supabaseKey) {
+        throw new Error('Configuration error');
+      }
+
+      const response = await fetch(`${supabaseUrl}/functions/v1/contact-form`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${supabaseKey}`
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+          honeypot: formData.honeypot
+        })
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send message');
+      }
+
+      alert('Thank you for contacting us! We will get back to you soon.');
+      setFormData({ name: '', email: '', phone: '', message: '', honeypot: '' });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('Sorry, there was an error sending your message. Please try calling us directly at (516) 234-0786.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const services = [
@@ -565,6 +605,16 @@ function App() {
 
               <form onSubmit={handleSubmit} className="bg-white p-8 rounded-2xl shadow-xl border-t-4" style={{ borderTopColor: '#FFCC00' }}>
                 <div className="space-y-5">
+                  <div style={{ position: 'absolute', left: '-9999px' }} aria-hidden="true">
+                    <input
+                      type="text"
+                      name="website"
+                      tabIndex={-1}
+                      autoComplete="off"
+                      value={formData.honeypot}
+                      onChange={(e) => setFormData({ ...formData, honeypot: e.target.value })}
+                    />
+                  </div>
                   <div>
                     <label htmlFor="name" className="block text-gray-700 font-semibold mb-2">Name</label>
                     <input
@@ -575,6 +625,7 @@ function App() {
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 gold-focus outline-none transition-all"
                       placeholder="Your Name"
+                      disabled={isSubmitting}
                     />
                   </div>
                   <div>
@@ -587,6 +638,7 @@ function App() {
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 gold-focus outline-none transition-all"
                       placeholder="your@email.com"
+                      disabled={isSubmitting}
                     />
                   </div>
                   <div>
@@ -599,6 +651,7 @@ function App() {
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 gold-focus outline-none transition-all"
                       placeholder="(123) 456-7890"
+                      disabled={isSubmitting}
                     />
                   </div>
                   <div>
@@ -611,14 +664,16 @@ function App() {
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 gold-focus outline-none transition-all resize-none"
                       placeholder="Tell us about your dream vacation..."
+                      disabled={isSubmitting}
                     />
                   </div>
                   <button
                     type="submit"
-                    className="w-full py-4 rounded-lg font-bold text-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 border-2"
+                    disabled={isSubmitting}
+                    className="w-full py-4 rounded-lg font-bold text-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 border-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                     style={{ backgroundColor: '#FFCC00', borderColor: '#FFCC00', color: '#1A1A1A' }}
                   >
-                    Send Message
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
                   </button>
                 </div>
               </form>
