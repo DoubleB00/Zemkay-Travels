@@ -91,7 +91,7 @@ function App() {
               <a href="#testimonials" className="text-gray-900 hover:text-gray-700 transition-colors font-medium">Testimonials</a>
               <a href="#contact" className="text-gray-900 hover:text-gray-700 transition-colors font-medium">Contact</a>
               <a
-                href="tel:5162340786"
+                href="tel:+15162340786"
                 className="bg-gradient-to-r from-green-600 via-green-700 to-green-600 text-white px-6 py-2.5 rounded-full hover:shadow-lg transition-all duration-300 font-semibold border-2 border-green-700"
               >
                 Call Now
@@ -139,7 +139,7 @@ function App() {
                 Get a Free Quote
               </a>
               <a
-                href="tel:5162340786"
+                href="tel:+15162340786"
                 className="bg-gradient-to-r from-emerald-600 to-green-700 text-white px-10 py-4 rounded-full text-lg font-bold hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center gap-2"
               >
                 <Phone className="h-5 w-5" />
@@ -569,7 +569,7 @@ function App() {
                   </div>
                   <div>
                     <h3 className="font-bold text-gray-900 mb-2 text-lg">Phone</h3>
-                    <a href="tel:5162340786" className="text-emerald-600 hover:text-emerald-700 text-xl font-semibold">
+                    <a href="tel:+15162340786" className="text-emerald-600 hover:text-emerald-700 text-xl font-semibold">
                       (516) 234-0786
                     </a>
                   </div>
@@ -705,7 +705,7 @@ function App() {
               <ul className="space-y-2 mb-6">
                 <li className="flex items-center space-x-2">
                   <Phone className="h-5 w-5" style={{ color: '#FFCC00' }} />
-                  <a href="tel:5162340786" className="text-gray-400 transition-colors font-semibold hover-gold">
+                  <a href="tel:+15162340786" className="text-gray-400 transition-colors font-semibold hover-gold">
                     (516) 234-0786
                   </a>
                 </li>
@@ -749,7 +749,7 @@ function App() {
       </footer>
 
       <a
-        href="tel:5162340786"
+        href="tel:+15162340786"
         className="fixed bottom-6 right-6 bg-gradient-to-r from-green-600 via-green-700 to-green-600 text-white p-5 rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-300 z-50 animate-bounce border-2 border-green-700"
         style={{ animationDuration: '3s' }}
         aria-label="Call us at (516) 234-0786"
