@@ -55,17 +55,17 @@ h4 {
 }
 
 .gold-focus:focus {
-  --tw-ring-color: #FFCC00;
-  border-color: #FFCC00 !important;
-  box-shadow: 0 0 0 3px rgba(255, 204, 0, 0.3);
+  --tw-ring-color: #AD9044;
+  border-color: #AD9044 !important;
+  box-shadow: 0 0 0 3px rgba(173, 144, 68, 0.3);
 }
 
 .hover-gold:hover {
-  color: #FFCC00;
+  color: #AD9044;
 }
 
 .hover-gold-bg:hover {
-  background-color: #FFCC00;
+  background-color: #AD9044;
 }
 
 @media (max-width: 768px) {
